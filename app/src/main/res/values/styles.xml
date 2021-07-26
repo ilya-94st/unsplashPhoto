@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="wallpepers">
+        <item name="android:textSize">36sp</item>
+        <item name="android:fontFamily">@font/almendra_bold</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="progres">
+        <item name="android:layout_marginStart">@dimen/l</item>
+        <item name="android:layout_marginTop">2dp</item>
+    </style>
+
+    <style name="size_image">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginTop">@dimen/xs</item>
+        <item name="android:layout_marginBottom">@dimen/xs</item>
+    </style>
+
+    <style name="textInstogram_textVector">
+        <item name="android:layout_marginStart">@dimen/s</item>
+    </style>
+
+<style name="pop_animation">
+    <item name="android:windowEnterAnimation">@anim/up_pop_menu</item>
+</style>
+
+    <style name="ImageButton">
+        <item name="android:layout_marginTop">@dimen/s</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <style name="textNameInfo">
+        <item name="android:layout_marginStart">@dimen/dimens36</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="textEmail">
+        <item name="android:layout_marginStart">@dimen/dimens36</item>
+    </style>
+
+    <style name="buttonPortfolio">
+        <item name="android:layout_marginTop">@dimen/s</item>
+        <item name="android:layout_weight">0.5</item>
+        <item name="backgroundTint">@color/blue</item>
+        <item name="cornerRadius">20dp</item>
+    </style>
+
+
+
+    <style name="textDescription">
+        <item name="android:layout_marginTop">@dimen/s</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="size_info" parent="size_image">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="textData">
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="textColor" parent="size_image">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="linerDetailsMenu">
+        <item name="android:layout_marginStart">48dp</item>
+        <item name="android:layout_marginEnd">44dp</item>
+        <item name="android:layout_marginBottom">20dp</item>
+        <item name="android:background">@drawable/oval_search</item>
+    </style>
+
+    <style name="buttonFullScreen">
+        <item name="android:layout_marginTop">70dp</item>
+        <item name="android:layout_marginEnd">20dp</item>
+        <item name="android:background">@drawable/checked_button</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="ImageBack">
+        <item name="android:layout_marginStart">@dimen/l</item>
+        <item name="android:layout_marginTop">40dp</item>
+        <item name="android:background">@drawable/oval_search</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:visibility">invisible</item>
+    </style>
+
+    <style name="textNameImage">
+        <item name="android:layout_marginStart">26dp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="butom_menu_details">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginLeft">@dimen/s</item>
+        <item name="android:layout_weight">0.33</item>
+        <item name="android:background">@drawable/checked_button</item>
+    </style>
+
+    <style name="buton_details_info">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginRight">@dimen/s</item>
+        <item name="android:layout_weight">0.33</item>
+        <item name="android:background">@drawable/checked_button</item>
+    </style>
+
+    <style name="toolbar_details">
+        <item name="android:background">@color/white</item>
+        <item name="android:minHeight">?attr/actionBarSize</item>
+        <item name="android:theme">?attr/actionBarTheme</item>
+    </style>
+
+    <style name="edit_text_fragment_search">
+        <item name="android:layout_marginStart">@dimen/s</item>
+        <item name="android:padding">14dp</item>
+        <item name="android:layout_marginTop">40dp</item>
+        <item name="android:background">@drawable/oval_search</item>
+        <item name="android:layout_marginEnd">@dimen/s</item>
+    </style>
+
+    <style name="button_frame_fragment_search">
+        <item name="android:layout_marginEnd">@dimen/l</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="text_fragment_search">
+        <item name="android:layout_above">@id/button_retry</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <style name="constrayet_recycler_history">
+        <item name="android:layout_marginStart">@dimen/s</item>
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:layout_marginEnd">@dimen/s</item>
+        <item name="android:layout_marginBottom">12dp</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="image_heard">
+        <item name="android:layout_marginTop">@dimen/s</item>
+        <item name="android:layout_marginEnd">@dimen/l</item>
+        <item name="android:layout_marginBottom">@dimen/s</item>
+    </style>
+
+    <style name="text_history">
+        <item name="android:layout_marginStart">@dimen/l</item>
+        <item name="android:layout_marginTop">@dimen/xs</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="text_history_time">
+        <item name="android:layout_marginStart">2dp</item>
+        <item name="android:layout_marginTop">26dp</item>
+    </style>
+
+    <style name="image_delete_selector">
+        <item name="android:layout_marginTop">22dp</item>
+        <item name="android:layout_marginEnd">12dp</item>
+        <item name="android:padding">@dimen/l</item>
+        <item name="android:layout_gravity">end</item>
+        <item name="android:background">@drawable/oval_search</item>
+    </style>
+</resources>

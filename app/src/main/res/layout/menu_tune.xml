@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linerPop"
+    android:visibility="invisible"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:id="@+id/setHomeScreenWallpaper"
+        android:background="@drawable/checked_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/imageWorkTable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            app:srcCompat="@drawable/ic_baseline_image_24" />
+        <TextView
+            android:id="@+id/textWorkTable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:text="@string/textWorkTable" />
+
+    </LinearLayout>
+
+   <LinearLayout
+       android:id="@+id/setLockScreenWallpaper"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:background="@drawable/checked_button"
+       >
+       <ImageView
+           android:id="@+id/imageLockScreen"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginBottom="20dp"
+           android:layout_marginTop="10dp"
+           app:srcCompat="@drawable/ic_baseline_image_24"
+           android:layout_marginStart="20dp"
+           />
+       <TextView
+           android:id="@+id/textLockScreen"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:gravity="center"
+           android:layout_marginBottom="20dp"
+           android:layout_marginTop="10dp"
+           android:layout_marginStart="20dp"
+           android:text="@string/textLockScreen"
+           />
+   </LinearLayout>
+<LinearLayout
+    android:id="@+id/addSelect"
+    android:background="@drawable/checked_button"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imageSaveFavorite"
+        android:layout_width="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"
+        app:srcCompat="@drawable/ic_baseline_favorite_24"
+        android:layout_height="wrap_content"
+       android:layout_marginStart="20dp"
+        />
+
+    <TextView
+        android:id="@+id/textSaveFavorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:layout_marginStart="20dp"
+        android:text="@string/textSaveFavorite"
+        />
+</LinearLayout>
+</LinearLayout>
+</layout>
