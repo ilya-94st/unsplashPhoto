@@ -18,7 +18,7 @@ import org.joda.time.format.DateTimeFormatter
 
 class HistaroryAdapter(
     private val listener: ChangeQueryState,
-    private val onItemClick: OnItemClick
+    private val onItemClick: OnItemClick,private val compareDates:(date: String)->String
 ) :
     ListAdapter<EntyQuery, HistaroryAdapter.MViewHolder>(HISTORY_COMPARATOR) {
 
@@ -87,29 +87,6 @@ class HistaroryAdapter(
         fun openSearchPage(query: String)
     }
 
-    fun compareDates(date: String) : String {
-        val currentDate = DateTime.now()
-        val queryDate = DateTime.parse(date)
-
-        val daysBetween = Days.daysBetween(queryDate, currentDate)
-        val hoursBetween = Hours.hoursBetween(queryDate, currentDate)
-        val minutesBetween = Minutes.minutesBetween(queryDate, currentDate)
-
-        val formatter: DateTimeFormatter = DateTimeFormat.forPattern("MMMM")
-        val month = formatter.print(queryDate)
-
-
-
-        when (daysBetween.days) {
-            0 -> when (hoursBetween.hours) {
-                0 -> if(minutesBetween.minutes <= 5) return "just now" else return "${minutesBetween.minutes} minutes ago"
-                in 1..24 -> return "${hoursBetween.hours} hours ago"
-            }
-            1 -> return "yesterday"
-            in 1..9999 -> "${queryDate.dayOfMonth()} ${queryDate.monthOfYear()}"
-        }
-        return ""
-    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MViewHolder {
         return MViewHolder(

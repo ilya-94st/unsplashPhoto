@@ -52,6 +52,7 @@ android {
 dependencies {
     //animation
     implementation 'com.airbnb.android:lottie:3.4.1'
+    implementation 'androidx.viewpager:viewpager:1.0.0'
     def lifecycle_version = "2.1.0"
     def room_version = "2.3.0"
 

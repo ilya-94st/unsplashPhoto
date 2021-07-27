@@ -21,6 +21,7 @@ import com.example.staselovich_p3_l1.adapter.UnsplashAdapter
 import com.example.staselovich_p3_l1.adapter.UnsplashPhotoLoadAdapter
 import com.example.staselovich_p3_l1.databinding.FragmentWallBinding
 import com.example.staselovich_p3_l1.model.UnsplashPhoto
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import dagger.hilt.android.AndroidEntryPoint
 import java.util.*
 
@@ -36,6 +37,7 @@ class WallFragment : Fragment(R.layout.fragment_wall), UnsplashAdapter.OnItemCli
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentWallBinding.bind(view)
+        requireActivity().findViewById<BottomNavigationView>(R.id.bottomNavigationView).visibility = View.VISIBLE
         if(!args.link.isEmpty()){
             viewModel.searcPhotos(args.link)
         }

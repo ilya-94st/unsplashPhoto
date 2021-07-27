@@ -9,6 +9,7 @@ import com.example.staselovich_p3_l1.R
 import com.example.staselovich_p3_l1.adapter.FavoritesImagesAdapter
 import com.example.staselovich_p3_l1.dataBase.EntyImage
 import com.example.staselovich_p3_l1.databinding.FragmentFavoritesImagesBinding
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.Dispatchers
@@ -25,6 +26,7 @@ class FavoritesImageFragment : Fragment(R.layout.fragment_favorites_images),
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentFavoritesImagesBinding.bind(view)
+        requireActivity().findViewById<BottomNavigationView>(R.id.bottomNavigationView).visibility = View.VISIBLE
         adapter = FavoritesImagesAdapter(this,this)
         binding.recyclerSelect.adapter =adapter
         viewModel.allFavoritePhotos.observe(viewLifecycleOwner) {

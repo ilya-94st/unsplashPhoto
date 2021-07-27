@@ -10,6 +10,7 @@ import com.example.staselovich_p3_l1.R
 import com.example.staselovich_p3_l1.adapter.HistaroryAdapter
 import com.example.staselovich_p3_l1.dataBase.EntyQuery
 import com.example.staselovich_p3_l1.databinding.FragmentHistoryBinding
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.GlobalScope
@@ -24,6 +25,10 @@ class HistoryFragment : Fragment(R.layout.fragment_history), HistaroryAdapter.On
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentHistoryBinding.bind(view)
+        requireActivity().findViewById<BottomNavigationView>(R.id.bottomNavigationView).visibility = View.VISIBLE
+        binding.buttonDelete.setOnClickListener {
+            mhistoryScreen.deleteAllQueris()
+        }
         mhistoryScreen.allEntyQuery.observe(viewLifecycleOwner,{
             adapter.submitList(it)
         })
@@ -31,7 +36,7 @@ class HistoryFragment : Fragment(R.layout.fragment_history), HistaroryAdapter.On
     }
 
     private fun setupRecyclerView() {
-        adapter = HistaroryAdapter(this, this)
+        adapter = HistaroryAdapter(this, this,fun(date:String):String{return mhistoryScreen.compareDates(date)})
         val recyclerView = binding.recyclelHistory
         val layoutManager = LinearLayoutManager(requireContext())
         layoutManager.reverseLayout = true

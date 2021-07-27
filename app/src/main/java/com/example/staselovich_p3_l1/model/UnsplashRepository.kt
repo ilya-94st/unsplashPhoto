@@ -48,5 +48,8 @@ class UnsplashRepository @Inject constructor(private val unsplashApi:UnsplashApi
     fun changeQueryLikeState(query: EntyQuery) {
         images.changeQueryLikeState(query)
     }
+    fun deleteAllQueris(){
+        images.deleteAllQury()
+    }
 
 }

@@ -35,7 +35,7 @@ class DetailsViewModel @ViewModelInject constructor(
         @RequiresApi(Build.VERSION_CODES.O)
         get() {
             val photoDate = LocalDate.parse(saveArgs?.createdAt?.substring(0,10), DateTimeFormatter.ISO_DATE)
-            val formattedDate = photoDate.format(DateTimeFormatter.ofPattern("dd-MMMM-yyyy")).toString().replace("-", " ")
+            val formattedDate = photoDate.format(DateTimeFormatter.ofPattern("dd-MMM-yyyy")).toString().replace("-", " ")
             return formattedDate
         }
 
@@ -50,11 +50,6 @@ class DetailsViewModel @ViewModelInject constructor(
         }
         return isAdded
     }
-
-    fun returnText() {
-        saveArgs?.description
-    }
-
     var isExpanded = false
 
     fun toggleDescription() {

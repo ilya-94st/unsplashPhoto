@@ -10,6 +10,7 @@ import com.example.staselovich_p3_l1.R
 import com.example.staselovich_p3_l1.adapter.FavoritesQueriesAdapter
 import com.example.staselovich_p3_l1.dataBase.EntyQuery
 import com.example.staselovich_p3_l1.databinding.FragmentFavoritesQueriseBinding
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.GlobalScope
@@ -23,6 +24,7 @@ class FavoritesQueriesFragment : Fragment(R.layout.fragment_favorites_querise), 
     private lateinit var adapter: FavoritesQueriesAdapter
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        requireActivity().findViewById<BottomNavigationView>(R.id.bottomNavigationView).visibility = View.VISIBLE
         _binding = FragmentFavoritesQueriseBinding.bind(view)
         initAdapter()
         mImageSelect.allEntyQuery.observe(viewLifecycleOwner,{
@@ -30,14 +32,13 @@ class FavoritesQueriesFragment : Fragment(R.layout.fragment_favorites_querise), 
         })
     }
     fun initAdapter() {
-        adapter = FavoritesQueriesAdapter(this,this)
+        adapter = FavoritesQueriesAdapter(this,this, fun(date:String):String{return mImageSelect.compareDates(date)})
         val recyclerHistory = binding.recyclelImageSelect
         recyclerHistory.setHasFixedSize(true)
         recyclerHistory.adapter = adapter
     }
+
     @DelicateCoroutinesApi
-
-
     override fun changeQueryState(query: EntyQuery) {
         GlobalScope.launch {
             if (query.liked) {

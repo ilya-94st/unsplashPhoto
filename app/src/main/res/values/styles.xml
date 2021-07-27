@@ -2,14 +2,14 @@
 <resources>
 
     <style name="wallpepers">
-        <item name="android:textSize">36sp</item>
+        <item name="android:textSize">@dimen/text36</item>
         <item name="android:fontFamily">@font/almendra_bold</item>
         <item name="android:textColor">@color/white</item>
     </style>
 
     <style name="progres">
         <item name="android:layout_marginStart">@dimen/l</item>
-        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:layout_marginTop">@dimen/xxs</item>
     </style>
 
     <style name="size_image">
@@ -34,7 +34,7 @@
     <style name="textNameInfo">
         <item name="android:layout_marginStart">@dimen/dimens36</item>
         <item name="android:textColor">@color/black</item>
-        <item name="android:textSize">24sp</item>
+        <item name="android:textSize">@dimen/text</item>
         <item name="android:textStyle">bold</item>
     </style>
 
@@ -46,14 +46,14 @@
         <item name="android:layout_marginTop">@dimen/s</item>
         <item name="android:layout_weight">0.5</item>
         <item name="backgroundTint">@color/blue</item>
-        <item name="cornerRadius">20dp</item>
+        <item name="cornerRadius">@dimen/xl</item>
     </style>
 
 
 
     <style name="textDescription">
         <item name="android:layout_marginTop">@dimen/s</item>
-        <item name="android:textSize">30sp</item>
+        <item name="android:textSize">@dimen/text30</item>
         <item name="android:textStyle">bold</item>
         <item name="android:gravity">center</item>
         <item name="android:textColor">@color/black</item>
@@ -62,7 +62,7 @@
     <style name="size_info" parent="size_image">
         <item name="android:layout_gravity">center</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">@dimen/text16</item>
     </style>
 
     <style name="textData">
@@ -72,33 +72,33 @@
     <style name="textColor" parent="size_image">
         <item name="android:layout_gravity">center</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">@dimen/text16</item>
     </style>
 
     <style name="linerDetailsMenu">
-        <item name="android:layout_marginStart">48dp</item>
-        <item name="android:layout_marginEnd">44dp</item>
-        <item name="android:layout_marginBottom">20dp</item>
+        <item name="android:layout_marginStart">@dimen/dimens50</item>
+        <item name="android:layout_marginEnd">@dimen/dimens44</item>
+        <item name="android:layout_marginBottom">@dimen/xl</item>
         <item name="android:background">@drawable/oval_search</item>
     </style>
 
     <style name="buttonFullScreen">
-        <item name="android:layout_marginTop">70dp</item>
-        <item name="android:layout_marginEnd">20dp</item>
+        <item name="android:layout_marginTop">@dimen/dimens70</item>
+        <item name="android:layout_marginEnd">@dimen/xl</item>
         <item name="android:background">@drawable/checked_button</item>
-        <item name="android:padding">10dp</item>
+        <item name="android:padding">@dimen/m</item>
     </style>
 
     <style name="ImageBack">
         <item name="android:layout_marginStart">@dimen/l</item>
-        <item name="android:layout_marginTop">40dp</item>
+        <item name="android:layout_marginTop">@dimen/dimens40</item>
         <item name="android:background">@drawable/oval_search</item>
-        <item name="android:padding">10dp</item>
+        <item name="android:padding">@dimen/m</item>
         <item name="android:visibility">invisible</item>
     </style>
 
     <style name="textNameImage">
-        <item name="android:layout_marginStart">26dp</item>
+        <item name="android:layout_marginStart">@dimen/xxl</item>
         <item name="android:textColor">@color/black</item>
     </style>
 
@@ -124,8 +124,8 @@
 
     <style name="edit_text_fragment_search">
         <item name="android:layout_marginStart">@dimen/s</item>
-        <item name="android:padding">14dp</item>
-        <item name="android:layout_marginTop">40dp</item>
+        <item name="android:padding">@dimen/m</item>
+        <item name="android:layout_marginTop">@dimen/dimens40</item>
         <item name="android:background">@drawable/oval_search</item>
         <item name="android:layout_marginEnd">@dimen/s</item>
     </style>
@@ -138,16 +138,16 @@
     <style name="text_fragment_search">
         <item name="android:layout_above">@id/button_retry</item>
         <item name="android:layout_centerHorizontal">true</item>
-        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:layout_marginBottom">@dimen/xs</item>
         <item name="android:textColor">@color/black</item>
         <item name="android:visibility">gone</item>
     </style>
 
     <style name="constrayet_recycler_history">
         <item name="android:layout_marginStart">@dimen/s</item>
-        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:layout_marginTop">@dimen/m</item>
         <item name="android:layout_marginEnd">@dimen/s</item>
-        <item name="android:layout_marginBottom">12dp</item>
+        <item name="android:layout_marginBottom">@dimen/m</item>
         <item name="android:background">@color/white</item>
     </style>
 
@@ -164,13 +164,13 @@
     </style>
 
     <style name="text_history_time">
-        <item name="android:layout_marginStart">2dp</item>
-        <item name="android:layout_marginTop">26dp</item>
+        <item name="android:layout_marginStart">@dimen/xxs</item>
+        <item name="android:layout_marginTop">@dimen/xxl</item>
     </style>
 
     <style name="image_delete_selector">
-        <item name="android:layout_marginTop">22dp</item>
-        <item name="android:layout_marginEnd">12dp</item>
+        <item name="android:layout_marginTop">@dimen/xl</item>
+        <item name="android:layout_marginEnd">@dimen/m</item>
         <item name="android:padding">@dimen/l</item>
         <item name="android:layout_gravity">end</item>
         <item name="android:background">@drawable/oval_search</item>

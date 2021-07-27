@@ -33,4 +33,6 @@ interface DaoImage {
     @Update
     fun changeQueryLikeState(query: EntyQuery)
 
+    @Query("DELETE FROM query_table")
+    fun deleteAllQury()
 }
